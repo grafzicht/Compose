@@ -6,7 +6,7 @@ services:
       - "80:80"
 
   zookeeper:
-    image: "wurstmeister/zookeeper"
+    image: "zookeeper"
 
   kafka:
     image: wurstmeister/kafka
