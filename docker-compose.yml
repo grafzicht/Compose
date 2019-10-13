@@ -4,3 +4,16 @@ services:
     build: ./proxy
     ports:
       - "80:80"
+
+  zookeeper:
+    image: "wurstmeister/zookeeper"
+
+  kafka:
+    image: wurstmeister/kafka
+    ports:
+      - "9092:9092"
+    depends_on:
+      - zookeeper
+
+  #TODO add IsHome
+  #TODO add Monitoring
