@@ -7,4 +7,4 @@ RUN tar -xf /raint.tar -C /raint/
 RUN mv /raint/server-master/* /raint/
 RUN yarn install
 RUN ls -ahl
-RUN yarn run start
+CMD yarn run start
