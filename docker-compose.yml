@@ -4,6 +4,8 @@ services:
     build: ./proxy
     ports:
       - "80:80"
+  depends_on:
+    - raint-server
 
   raint-server:
     build: ./raint/server
