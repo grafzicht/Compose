@@ -10,11 +10,7 @@ services:
     ports:
       - "8080:8080"
 
-  raint-overview:
-    build: ./raint/overview
-    ports:
-      - ""
-
+  #TODO add raint-overview
   #TODO add zookeeper
   #TODO add kafka
   #TODO add IsHome
