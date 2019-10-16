@@ -2,6 +2,7 @@ version: '3'
 services:
   proxy:
     build: ./proxy
+    container_name: proxy
     ports:
       - "80:80"
     depends_on:
@@ -9,8 +10,9 @@ services:
 
   raint-server:
     build: ./raint/server
-    ports:
-      - "8080:8080"
+    container_name: raint-server
+    expose:
+      - 8080
 
   #TODO add raint-overview
   #TODO add zookeeper
