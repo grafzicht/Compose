@@ -5,4 +5,5 @@ RUN apk add curl
 RUN curl https://git.snt.utwente.nl/raint/server/-/archive/master/server-master.tar -o /raint.tar
 RUN tar -xf /raint.tar -C /raint/
 RUN yarn install
+RUN ls -ahl
 RUN yarn run start
