@@ -5,15 +5,19 @@ services:
     ports:
       - "80:80"
 
-  zookeeper:
-    image: "zookeeper"
-
-  kafka:
-    image: wurstmeister/kafka
+  raint-server:
+    build: ./raint/server
     ports:
-      - "9092:9092"
-    depends_on:
-      - zookeeper
+      - "8080:8080"
 
+  raint-overview:
+    build: ./raint/overview
+    ports:
+      - ""
+
+  #TODO add zookeeper
+  #TODO add kafka
   #TODO add IsHome
   #TODO add Monitoring
+  #TODO add AMQP server
+  #TODO add Boodschappenlijstje
