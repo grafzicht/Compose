@@ -6,5 +6,4 @@ RUN curl https://git.snt.utwente.nl/raint/server/-/archive/master/server-master.
 RUN tar -xf /raint.tar -C /raint/
 RUN mv /raint/server-master/* /raint/
 RUN yarn install
-RUN ls -ahl
 ENTRYPOINT yarn run start
