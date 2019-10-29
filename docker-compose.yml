@@ -8,11 +8,11 @@ services:
     depends_on:
       - raint-server
 
-  raint-server:
-    build: ./raint/server
-    container_name: raint-server
-    expose:
-      - 8080
+  #raint-server:
+    #build: ./raint/server
+    #container_name: raint-server
+    #expose:
+     # - 8080
 
   #TODO add raint-overview
   #TODO add zookeeper
