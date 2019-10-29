@@ -5,8 +5,8 @@ services:
     container_name: proxy
     ports:
       - "80:80"
-    depends_on:
-      - raint-server
+    #depends_on:
+     # - raint-server
 
   #raint-server:
     #build: ./raint/server
