@@ -5,16 +5,7 @@ services:
     container_name: proxy
     ports:
       - "80:80"
-    depends_on:
-      - raint-server
 
-  raint-server:
-    build: ./raint/server
-    container_name: raint-server
-    expose:
-      - 8080
-
-  #TODO add raint-overview
   #TODO add zookeeper
   #TODO add kafka
   #TODO add IsHome
