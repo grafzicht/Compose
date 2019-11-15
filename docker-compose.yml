@@ -8,6 +8,9 @@ services:
 
   influx:
     image: influxdb:1.7
+    environment:
+      INFLUXDB_DB: grafzicht
+
 
   #TODO add zookeeper
   #TODO add kafka
