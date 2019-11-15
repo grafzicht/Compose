@@ -6,6 +6,9 @@ services:
     ports:
       - "80:80"
 
+  influx:
+    image: influxdb:1.7
+
   #TODO add zookeeper
   #TODO add kafka
   #TODO add IsHome
