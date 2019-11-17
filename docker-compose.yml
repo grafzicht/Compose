@@ -12,6 +12,8 @@ services:
       INFLUXDB_DB: grafzicht
     ports:
       - "8086:8086"
+    volumes:
+      - /data/influx:/var/lib/influxdb
 
 
   #TODO add zookeeper
