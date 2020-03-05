@@ -21,7 +21,8 @@ services:
   grafana:
     image: grafana/grafana
     environment:
-      GF_SERVER_ROOT_URL: %(protocol)s://%(domain)s/grafana/
+      GF_SERVER_SERVE_FROM_SUB_PATH: "true"
+      GF_SERVER_ROOT_URL: http://grafzicht.nl/grafana/
     depends_on:
       - influx
 
