@@ -19,8 +19,7 @@ services:
       - /data/influx:/var/lib/influxdb
 
   grafana:
-    build: ./grafana
-    container_name: grafana
+    image: grafana/grafana
     environment:
       GF_SERVER_SERVE_FROM_SUB_PATH: "true"
       GF_SERVER_ROOT_URL: http://grafzicht.nl/grafana/
