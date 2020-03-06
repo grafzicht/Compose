@@ -1,4 +1,4 @@
-FROM grafana:grafana
+FROM grafana/grafana
 
 RUN chown -R root:root /etc/grafana && \
 	chmod -R a+r /etc/grafana && \
