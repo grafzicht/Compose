@@ -26,6 +26,20 @@ services:
     depends_on:
       - influx
 
+  pihole:
+    image: pihole/pihole
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+    environment:
+      TZ: 'Europe/Amsterdam'
+      WEBPASSWORD: 'H3Awl7yd'
+      DNS1: 9.9.9.9
+      DNS2: no
+    volumes:
+      - /data/pihole/pihole/:/etc/pihole/
+      - /data/pihole/dnsmasq/:/etc/dnsmasq.d/
+
 
 
   #TODO add zookeeper
