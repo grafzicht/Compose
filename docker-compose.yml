@@ -26,10 +26,6 @@ services:
       GF_SERVER_ROOT_URL: http://grafzicht.nl/grafana/
     volumes:
       - /data/grafana/data:/var/lib/grafana
-      - /data/grafana/home:/usr/share/grafana
-      - /data/grafana/logs:/var/log/grafana
-      - /data/grafana/plugins:/var/lib/grafana/plugins
-      - /data/grafana/provision:/etc/grafana/provisioning
     depends_on:
       - influx
 
