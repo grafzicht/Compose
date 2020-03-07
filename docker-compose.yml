@@ -20,13 +20,16 @@ services:
 
   grafana:
     image: grafana/grafana
+    container_name: grafana
     environment:
       GF_SERVER_SERVE_FROM_SUB_PATH: "true"
       GF_SERVER_ROOT_URL: http://grafzicht.nl/grafana/
     volumes:
-      - /data/grafana/lib:/var/lib/grafana
-      - /data/grafana/etc:/etc/grafana
-      - /data/grafana/log:/var/log/grafana
+      - /data/grafana/data:/var/lib/grafana
+      - /data/grafana/home:/usr/share/grafana
+      - /data/grafana/logs:/var/log/grafana
+      - /data/grafana/plugins:/var/lib/grafana/plugins
+      - /data/grafana/provision:/etc/grafana/provisioning
     depends_on:
       - influx
 
