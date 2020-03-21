@@ -1,0 +1,6 @@
+NetMon:
+  minute: '*/5'
+  hour: '*'
+  day: '*'
+  month: '*'
+  weekday: '*'

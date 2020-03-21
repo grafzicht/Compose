@@ -1,0 +1,14 @@
+{
+  "name": "@grafzicht/netmon",
+  "version": "0.1.0",
+  "main": "script.js",
+  "author": "Sven Mol <sven@grafzicht.nl>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "esm": "^3.2.25",
+    "influx": "^5.5.1",
+    "ip-cidr": "^2.0.7",
+    "ping": "^0.2.2"
+  }
+}

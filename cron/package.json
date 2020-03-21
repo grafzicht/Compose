@@ -1,0 +1,14 @@
+{
+  "name": "@grafzicht/cron",
+  "version": "0.1.0",
+  "main": "daemon.js",
+  "author": "Sven Mol <sven@grafzicht.nl>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "dockerode": "^3.1.0",
+    "driftless": "^2.0.3",
+    "esm": "^3.2.25",
+    "yaml": "^1.8.2"
+  }
+}
