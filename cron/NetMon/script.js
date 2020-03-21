@@ -22,8 +22,8 @@ const pingHost = async (ip) => await ping.promise.probe(ip);
 	let availability = (await Promise.all(hosts.map(pingHost)))
 		.filter(({host}) => host !== 'unknown');
 
-	let available = availability.filter(({alive}) => alive).length;
-	let unavailable = availability.filter(({alive}) => !alive).length;
+	let available = availability.filter(({alive}) => !alive).length;
+	let unavailable = availability.filter(({alive}) => alive).length;
 
 	console.log(
 		available,
