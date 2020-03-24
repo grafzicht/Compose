@@ -56,6 +56,18 @@ services:
       - /data/pihole/pihole/:/etc/pihole/
       - /data/pihole/dnsmasq/:/etc/dnsmasq.d/
 
+  mongo:
+    image: webhippie/mongodb
+    container_name: mongo
+    ports:
+      - "27017:27017"
+      - "27018:27018"
+      - "27019:27019"
+    environment:
+      MONGODB_ROOT_USERNAME: grafzicht
+      MONGODB_ROOT_PASSWORD: H3Awl7yd
+    volumes:
+      - /data/mongo-db:/var/lib/mongodb
 
 
   #TODO add zookeeper
