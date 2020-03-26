@@ -14,6 +14,7 @@ services:
       - "443:443"
     depends_on:
       - grafana
+      - ctt-form-server
 
   influx:
     image: influxdb:1.7
@@ -68,6 +69,10 @@ services:
       MONGODB_ROOT_PASSWORD: H3Awl7yd
     volumes:
       - /data/mongo-db:/var/lib/mongodb
+
+  ctt-form-server:
+    build: ./ctt-form-server
+    container_name: ctt-form-server
 
 
   #TODO add zookeeper
