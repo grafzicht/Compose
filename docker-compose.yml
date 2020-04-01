@@ -6,19 +6,19 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 
-  ouroboros:
-    container_name: ouroboros
-    image: pyouroboros/ouroboros
-    environment:
-      CLEANUP: "true"
-      INTERVAL: 300
-      LOG_LEVEL: info
-      SELF_UPDATE: "true"
-      IGNORE: ""
-      TZ: Europe/Amsterdam
-    restart: unless-stopped
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+#  ouroboros:
+#    container_name: ouroboros
+#    image: pyouroboros/ouroboros
+#    environment:
+#      CLEANUP: "true"
+#      INTERVAL: 300
+#      LOG_LEVEL: info
+#      SELF_UPDATE: "true"
+#      IGNORE: ""
+#      TZ: Europe/Amsterdam
+#    restart: unless-stopped
+#    volumes:
+#      - /var/run/docker.sock:/var/run/docker.sock
 
   proxy:
     build: ./proxy
