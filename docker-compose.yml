@@ -40,6 +40,14 @@ services:
     volumes:
       - /data/influx:/var/lib/influxdb
 
+  telegraf:
+    image: telegraf:1.14
+    container_name: telegraf
+    volumes:
+      - ./telegraf/config.conf:/etc/telegraf/telegraf.conf
+    depends_on:
+      - influx
+
   grafana:
     image: grafana/grafana:6.7.1
     container_name: grafana
