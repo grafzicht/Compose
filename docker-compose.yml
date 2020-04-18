@@ -40,20 +40,20 @@ services:
     volumes:
       - /data/influx:/var/lib/influxdb
 
-  telegraf:
-    build: ./telegraf
-    container_name: telegraf
-    environment:
-      HOST_PROC: /rootfs/proc
-      HOST_SYS: /rootfs/sys
-      HOST_ETC: /rootfs/etc
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-      - /sys:/rootfs/sys:ro
-      - /proc:/rootfs/proc:ro
-      - /etc:/rootfs/etc:ro
-    depends_on:
-      - influx
+#  telegraf:
+#    build: ./telegraf
+#    container_name: telegraf
+#    environment:
+#      HOST_PROC: /rootfs/proc
+#      HOST_SYS: /rootfs/sys
+#      HOST_ETC: /rootfs/etc
+#    volumes:
+#      - /var/run/docker.sock:/var/run/docker.sock:ro
+#      - /sys:/rootfs/sys:ro
+#      - /proc:/rootfs/proc:ro
+#      - /etc:/rootfs/etc:ro
+#    depends_on:
+#      - influx
 
   grafana:
     image: grafana/grafana:6.7.1
