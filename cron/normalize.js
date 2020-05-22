@@ -31,6 +31,7 @@ const normalizeSchedule = schedule => {
 			day: decodeIndicator(time.day, allowableValues.day),
 			month: decodeIndicator(time.month, allowableValues.month),
 			weekday: decodeIndicator(time.weekday, allowableValues.weekday),
+			onLaunch: time['@launch'],
 		};
 	}
 

@@ -16,6 +16,12 @@ const normalizedSchedule = normalizeSchedule(parsedSchedule);
 	}
 	console.log(`Built schedule with ${Object.keys(normalizedSchedule).length} jobs`);
 
+	for (let job of normalizedSchedule) {
+		if(job.onLaunch){
+			startImage(job.container);
+		}
+	}
+
 	runContainers();
 	setDriftlessInterval(runContainers, 60000);
 })();

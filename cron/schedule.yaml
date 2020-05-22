@@ -4,3 +4,4 @@ NetMon:
   day: '*'
   month: '*'
   weekday: '*'
+  @launch: true
