@@ -1,10 +1,10 @@
 version: '3'
 services:
-#  cron:
-#    build: ./cron
-#    container_name: cron
-#    volumes:
-#      - /var/run/docker.sock:/var/run/docker.sock
+  cron:
+    build: ./cron
+    container_name: cron
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
 
 #  ouroboros:
 #    container_name: ouroboros
