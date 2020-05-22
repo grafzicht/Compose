@@ -30,6 +30,15 @@ services:
       - grafana
       - ctt-form-server
 
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - /data/certbot/data:/etc/letsencrypt
+      - /data/certbot/lib:/var/lib/letsencrypt
+    depends_on:
+      - proxy
+
   influx:
     image: influxdb:1.8
     container_name: influx
