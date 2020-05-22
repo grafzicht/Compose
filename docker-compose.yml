@@ -31,7 +31,7 @@ services:
       - ctt-form-server
 
   influx:
-    image: influxdb:1.7
+    image: influxdb:1.8
     container_name: influx
     environment:
       INFLUXDB_DB: grafzicht
