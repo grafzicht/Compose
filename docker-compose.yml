@@ -28,7 +28,7 @@ services:
       - "443:443"
     depends_on:
       - grafana
-      - ctt-form-server
+#      - ctt-form-server
 
   certbot:
     image: certbot/certbot
@@ -80,39 +80,39 @@ services:
     depends_on:
       - influx
 
-  pihole:
-    image: pihole/pihole
-    container_name: pihole
-    ports:
-      - "53:53/tcp"
-      - "53:53/udp"
-    environment:
-      TZ: 'Europe/Amsterdam'
-      WEBPASSWORD: 'H3Awl7yd'
-      DNS1: '9.9.9.9'
-      DNS2: 'no'
-    volumes:
-      - /data/pihole/pihole/:/etc/pihole/
-      - /data/pihole/dnsmasq/:/etc/dnsmasq.d/
+#  pihole:
+#    image: pihole/pihole
+#    container_name: pihole
+#    ports:
+#      - "53:53/tcp"
+#      - "53:53/udp"
+#    environment:
+#      TZ: 'Europe/Amsterdam'
+#      WEBPASSWORD: 'H3Awl7yd'
+#      DNS1: '9.9.9.9'
+#      DNS2: 'no'
+#    volumes:
+#      - /data/pihole/pihole/:/etc/pihole/
+#      - /data/pihole/dnsmasq/:/etc/dnsmasq.d/
 
-  mongo:
-    image: webhippie/mongodb
-    container_name: mongo
-    ports:
-      - "27017:27017"
-      - "27018:27018"
-      - "27019:27019"
-    environment:
-      MONGODB_AUTH: "true"
-      MONGODB_AUTH_DB: admin
-      MONGODB_ROOT_USERNAME: grafzicht
-      MONGODB_ROOT_PASSWORD: H3Awl7yd
-    volumes:
-      - /data/mongo-db:/var/lib/mongodb
+#  mongo:
+#    image: webhippie/mongodb
+#    container_name: mongo
+#    ports:
+#      - "27017:27017"
+#      - "27018:27018"
+#      - "27019:27019"
+#    environment:
+#      MONGODB_AUTH: "true"
+#      MONGODB_AUTH_DB: admin
+#      MONGODB_ROOT_USERNAME: grafzicht
+#      MONGODB_ROOT_PASSWORD: H3Awl7yd
+#    volumes:
+#      - /data/mongo-db:/var/lib/mongodb
 
-  ctt-form-server:
-    build: ./ctt-form-server
-    container_name: ctt-form-server
+#  ctt-form-server:
+#    build: ./ctt-form-server
+#    container_name: ctt-form-server
 
 
   #TODO add zookeeper
