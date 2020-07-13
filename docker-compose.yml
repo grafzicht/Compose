@@ -21,15 +21,17 @@ services:
 #      - /var/run/docker.sock:/var/run/docker.sock
 
   proxy:
-    image: cerebralfart/certbot-nginx
-    # build: ./proxy
+    build: ./proxy
     container_name: proxy
-    # ports:
-      # - "80:80"
-      # - "443:443"
-    # depends_on:
-      # - grafana
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - grafana
+      - influx
 #      - ctt-form-server
+    volumes:
+      - /data/certbot:/etc/letsencrypt/
 
   influx:
     image: influxdb:1.8
